@@ -1,0 +1,19 @@
+.containerHeader {
+  background: var(--gray-700);
+
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerHeader span {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-left: 0.75rem;
+
+  background: -webkit-linear-gradient(180deg, var(--purple-300) 55%, var(--blue-100) 45%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
