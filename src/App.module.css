@@ -17,3 +17,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.containerContent {
+  margin-top: calc(0px - 1.6rem - 3px);
+}

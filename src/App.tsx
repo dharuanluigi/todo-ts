@@ -1,8 +1,7 @@
 import RocketSvg from "./assets/rocket.svg";
 
 import styles from "./App.module.css";
-import { Input } from "./components/Input";
-import { AddTaskButton } from "./components/AddTaskButton";
+import { CreateTask } from "./components/CreateTask";
 
 export function App() {
   return (
@@ -12,9 +11,9 @@ export function App() {
         <span>todo</span>
       </header>
 
-      <Input />
-
-      <AddTaskButton />
+      <div className={styles.containerContent}>
+        <CreateTask />
+      </div>
     </div>
   );
 }
