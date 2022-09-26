@@ -1,0 +1,27 @@
+.taskHeader {
+  width: 46rem;
+  height: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+}
+.totalCreatedTaskTitle {
+  color: var(--blue-100);
+}
+
+.totalCompletedTaskTitle {
+  color: var(--purple-100);
+}
+
+.counterTasks {
+  width: 2.5rem;
+  height: 1.1rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+
+  background: var(--gray-400);
+  color: var(--gray-200); 
+
+  margin-left: 0.5rem;
+}

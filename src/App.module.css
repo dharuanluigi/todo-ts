@@ -21,3 +21,9 @@
 .containerContent {
   margin-top: calc(0px - 1.6rem - 3px);
 }
+
+.containerTasks {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
