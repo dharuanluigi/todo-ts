@@ -36,6 +36,7 @@
   border: 2px solid var(--blue-100);
 
   font-weight: 400;
+  cursor: pointer;
 }
 
 .checked {
@@ -45,6 +46,8 @@
 
   background: var(--purple-300);
   border: 2px solid var(--purple-300);
+
+  cursor: pointer;
 }
 
 .checked_text {
@@ -57,8 +60,15 @@
   color: var(--gray-100);
 }
 
-.centerizeCheck {
+.styleCheckedIcon {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: var(--gray-100);
+}
+
+.styleTrashIcon:hover {
+  color: var(--red-200);
+  cursor: pointer;
 }

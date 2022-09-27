@@ -18,7 +18,7 @@ export function Task() {
           className={isTaskDone ? styles.checked : styles.unChecked}
           onCheckedChange={handleTaskIsDone}
         >
-          <Checkbox.Indicator className={styles.centerizeCheck}>
+          <Checkbox.Indicator className={styles.styleCheckedIcon}>
             <Check weight="bold" />
           </Checkbox.Indicator>
         </Checkbox.Root>
@@ -29,7 +29,7 @@ export function Task() {
             Lorem ipsum dolor sit amet consectetur.
           </span>
         </div>
-        <Trash weight="bold" size={20} />
+        <Trash weight="bold" size={20} className={styles.styleTrashIcon} />
       </div>
     </div>
   );
