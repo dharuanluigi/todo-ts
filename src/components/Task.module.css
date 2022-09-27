@@ -34,6 +34,8 @@
 
   background: var(--gray-500);
   border: 2px solid var(--blue-100);
+
+  font-weight: 400;
 }
 
 .checked {
@@ -43,11 +45,16 @@
 
   background: var(--purple-300);
   border: 2px solid var(--purple-300);
-  color: var(--gray-100);
 }
 
 .checked_text {
   text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.unChecked_text {
+  text-decoration: none;
+  color: var(--gray-100);
 }
 
 .centerizeCheck {
