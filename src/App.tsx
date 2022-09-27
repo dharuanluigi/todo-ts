@@ -13,6 +13,16 @@ import moquedTasks from "./mocks/task.moq.json";
 export function App() {
   const [tasks, setTasks] = useState<TaskProps[]>(moquedTasks);
 
+  function completeTasks(taskId: number, isDone: boolean) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        task.isDone = isDone;
+      }
+      return task;
+    });
+    setTasks(newTasks);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -25,7 +35,7 @@ export function App() {
       </div>
 
       <div className={styles.containerTasks}>
-        <ViewTask tasks={tasks} />
+        <ViewTask tasks={tasks} onTaskCompleted={completeTasks} />
       </div>
     </div>
   );

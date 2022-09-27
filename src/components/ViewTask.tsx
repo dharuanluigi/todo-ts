@@ -4,9 +4,10 @@ import styles from "./ViewTask.module.css";
 
 interface ViewTaskProps {
   tasks: TaskProps[];
+  onTaskCompleted: (taskId: number, isChecked: boolean) => void;
 }
 
-export function ViewTask({ tasks }: ViewTaskProps) {
+export function ViewTask({ tasks, onTaskCompleted }: ViewTaskProps) {
   function calcHowManyTasksIsDone() {
     let total = tasks.filter((task) => task.isDone);
     return total.length;
@@ -29,7 +30,9 @@ export function ViewTask({ tasks }: ViewTaskProps) {
 
       <div>
         {tasks ? (
-          tasks.map((task) => <Task key={task.id} data={task} />)
+          tasks.map((task) => (
+            <Task key={task.id} data={task} onTaskCompleted={onTaskCompleted} />
+          ))
         ) : (
           <EmptyTaskView />
         )}

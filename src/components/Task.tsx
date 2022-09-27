@@ -12,13 +12,15 @@ export interface TaskProps {
 
 interface TaskPropsModel {
   data: TaskProps;
+  onTaskCompleted: (taskId: number, isChecked: boolean) => void;
 }
 
-export function Task({ data }: TaskPropsModel) {
+export function Task({ data, onTaskCompleted }: TaskPropsModel) {
   const [isTaskDone, setIsTaskDone] = useState<boolean>(data.isDone);
 
   function handleTaskIsDone(isChecked: boolean) {
     setIsTaskDone(isChecked);
+    onTaskCompleted(data.id, isChecked);
   }
 
   return (
