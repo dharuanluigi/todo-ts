@@ -7,16 +7,23 @@ interface ViewTaskProps {
 }
 
 export function ViewTask({ tasks }: ViewTaskProps) {
+  function calcHowManyTasksIsDone() {
+    let total = tasks.filter((task) => task.isDone);
+    return total.length;
+  }
+
   return (
     <div className={styles.taskViewContainer}>
       <div className={styles.taskHeader}>
         <div>
           <span className={styles.totalCreatedTaskTitle}>Tarefas criadas</span>
-          <span className={styles.counterTasks}>{0}</span>
+          <span className={styles.counterTasks}>{tasks.length}</span>
         </div>
         <div>
           <span className={styles.totalCompletedTaskTitle}>Concluídas</span>
-          <span className={styles.counterTasks}>{0}</span>
+          <span className={styles.counterTasks}>
+            {calcHowManyTasksIsDone()} de {tasks.length}
+          </span>
         </div>
       </div>
 
