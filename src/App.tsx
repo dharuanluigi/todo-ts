@@ -28,6 +28,11 @@ export function App() {
     setTasks(tasksWithoutDeletedOne);
   }
 
+  function addNewTask(task: TaskProps) {
+    const tasksWithNewTask = [...tasks, task];
+    setTasks(tasksWithNewTask);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -36,7 +41,7 @@ export function App() {
       </header>
 
       <div className={styles.containerContent}>
-        <CreateTask />
+        <CreateTask onCreateTask={addNewTask} />
       </div>
 
       <div className={styles.containerTasks}>

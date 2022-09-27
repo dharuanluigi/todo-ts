@@ -1,11 +1,14 @@
+import { InputHTMLAttributes } from "react";
+
 import styles from "./Input.module.css";
 
-export function Input() {
+export function Input({ ...props }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       className={styles.inputTask}
       type="text"
       placeholder="Adicione uma nova tarefa"
+      {...props}
     />
   );
 }
