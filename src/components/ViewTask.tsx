@@ -1,8 +1,12 @@
 import { EmptyTaskView } from "./EmptyTaskView";
-import { Task } from "./Task";
+import { Task, TaskProps } from "./Task";
 import styles from "./ViewTask.module.css";
 
-export function ViewTask() {
+interface ViewTaskProps {
+  tasks: TaskProps[];
+}
+
+export function ViewTask({ tasks }: ViewTaskProps) {
   return (
     <div className={styles.taskViewContainer}>
       <div className={styles.taskHeader}>
@@ -17,9 +21,11 @@ export function ViewTask() {
       </div>
 
       <div>
-        <EmptyTaskView />
-        <Task />
-        <Task />
+        {tasks ? (
+          tasks.map((task) => <Task key={task.id} data={task} />)
+        ) : (
+          <EmptyTaskView />
+        )}
       </div>
     </div>
   );
