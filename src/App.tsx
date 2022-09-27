@@ -23,6 +23,11 @@ export function App() {
     setTasks(newTasks);
   }
 
+  function deleteTasks(taskId: number) {
+    const tasksWithoutDeletedOne = tasks.filter((task) => task.id !== taskId);
+    setTasks(tasksWithoutDeletedOne);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -35,7 +40,11 @@ export function App() {
       </div>
 
       <div className={styles.containerTasks}>
-        <ViewTask tasks={tasks} onTaskCompleted={completeTasks} />
+        <ViewTask
+          tasks={tasks}
+          onTaskCompleted={completeTasks}
+          onDeleteTask={deleteTasks}
+        />
       </div>
     </div>
   );

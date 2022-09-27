@@ -13,9 +13,10 @@ export interface TaskProps {
 interface TaskPropsModel {
   data: TaskProps;
   onTaskCompleted: (taskId: number, isChecked: boolean) => void;
+  onDeleteTask: (taskId: number) => void;
 }
 
-export function Task({ data, onTaskCompleted }: TaskPropsModel) {
+export function Task({ data, onTaskCompleted, onDeleteTask }: TaskPropsModel) {
   const [isTaskDone, setIsTaskDone] = useState<boolean>(data.isDone);
 
   function handleTaskIsDone(isChecked: boolean) {
@@ -42,7 +43,12 @@ export function Task({ data, onTaskCompleted }: TaskPropsModel) {
             {data.content}
           </span>
         </div>
-        <Trash weight="bold" size={20} className={styles.styleTrashIcon} />
+        <Trash
+          weight="bold"
+          size={20}
+          className={styles.styleTrashIcon}
+          onClick={() => onDeleteTask(data.id)}
+        />
       </div>
     </div>
   );
