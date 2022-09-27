@@ -1,0 +1,57 @@
+.taskContainer {
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 8px;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px var(--shadow);
+}
+
+.taskContainer + .taskContainer {
+  margin-top: 0.75rem;
+}
+
+.task {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskContent {
+  width: 100%;
+  height: 100%;
+
+  max-width: 39.8rem;
+  max-height: 4.5rem;
+  margin-left: 1rem;
+}
+
+.unChecked {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+
+  background: var(--gray-500);
+  border: 2px solid var(--blue-100);
+}
+
+.checked {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+
+  background: var(--purple-300);
+  border: 2px solid var(--purple-300);
+  color: var(--gray-100);
+}
+
+.checked_text {
+  text-decoration: line-through;
+}
+
+.centerizeCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

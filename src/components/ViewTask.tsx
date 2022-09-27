@@ -1,4 +1,5 @@
 import { EmptyTaskView } from "./EmptyTaskView";
+import { Task } from "./Task";
 import styles from "./ViewTask.module.css";
 
 export function ViewTask() {
@@ -17,6 +18,8 @@ export function ViewTask() {
 
       <div>
         <EmptyTaskView />
+        <Task />
+        <Task />
       </div>
     </div>
   );
