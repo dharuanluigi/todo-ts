@@ -8,7 +8,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
 ## Funcionamento
 
-[link do gif]
+![todo-v0 1](https://user-images.githubusercontent.com/50119686/192427668-d4323278-d35f-465b-8404-18cc31af7a52.gif)
 
 ### Trilha adicional
 
