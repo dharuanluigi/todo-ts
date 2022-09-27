@@ -34,7 +34,7 @@ export function ViewTask({
       </div>
 
       <div>
-        {tasks ? (
+        {tasks.length > 0 ? (
           tasks.map((task) => (
             <Task
               key={task.id}
