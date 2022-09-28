@@ -18,7 +18,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
   [x] Adicionar validação input.
 
-  [ ] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
+  [x] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
 
   [ ] Adicionar opção para detalhar melhor a tarefa em um modal onde é possível adicionar ou alterar a descrição detalhada.
 

@@ -21,7 +21,6 @@ export function CreateTask({ onCreateTask }: CreateTaskProps) {
     const normalizedInput = hasJustSpacesRegex.test(inputedValue)
       ? inputedValue.trim()
       : inputedValue;
-
     setTaskContent(normalizedInput);
   }
 
@@ -37,7 +36,7 @@ export function CreateTask({ onCreateTask }: CreateTaskProps) {
 
   return (
     <div className={styles.createTask}>
-      <Input onChange={handleTaskContent} value={taskContent} />
+      <Input onChange={handleTaskContent} value={taskContent} maxLength={65} />
       <AddTaskButton
         disabled={inputHasInvalidTaskName}
         onClick={handleAddNewTask}
