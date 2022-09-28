@@ -9,3 +9,28 @@
   border: 1px solid var(--gray-700);
   box-shadow: 0px 2px 8px var(--shadow);
 }
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.charCounter {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.1rem;
+
+  font-size: 0.750rem;
+}
+
+.charCounterLimitHit {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.1rem;
+
+  font-size: 0.750rem;
+  color: var(--red-200);
+  font-weight: 900;
+}
