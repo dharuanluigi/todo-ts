@@ -16,7 +16,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
 - Itens planejados de melhoria
 
-  [ ] Adicionar validação input.
+  [x] Adicionar validação input.
 
   [ ] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
 
