@@ -8,7 +8,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
 ## Funcionamento
 
-![todo-v0 1](https://user-images.githubusercontent.com/50119686/192427668-d4323278-d35f-465b-8404-18cc31af7a52.gif)
+![todo-v0 2](https://user-images.githubusercontent.com/50119686/192666198-5c589b5d-09ba-4d6f-911c-0f3776589de7.gif)
 
 ### Trilha adicional
 
@@ -18,7 +18,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
   [x] Adicionar validação input.
 
-  [ ] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
+  [x] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
 
   [ ] Adicionar opção para detalhar melhor a tarefa em um modal onde é possível adicionar ou alterar a descrição detalhada.
 
