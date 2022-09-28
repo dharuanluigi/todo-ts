@@ -15,10 +15,15 @@
 
   font-weight: 700;
 
-  transition: background-color .3s ;
+  transition: background-color .3s;
+  cursor: pointer;
 }
 
-.addTaskButton:hover {
+.addTaskButton:not(:disabled):hover {
   background: var(--blue-100);
-  cursor: pointer;
+}
+
+.addTaskButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }

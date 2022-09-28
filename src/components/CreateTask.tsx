@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, SyntheticEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { AddTaskButton } from "./AddTaskButton";
 import { Input } from "./Input";
 
@@ -13,22 +13,35 @@ interface CreateTaskProps {
 export function CreateTask({ onCreateTask }: CreateTaskProps) {
   const [taskContent, setTaskContent] = useState<string>("");
 
-  function handleTaskContent(event: BaseSyntheticEvent) {
-    setTaskContent(event.target.value);
+  function handleTaskContent(event: ChangeEvent<HTMLInputElement>) {
+    const inputedValue = event.target.value;
+
+    const hasJustSpacesRegex = new RegExp(/^\s*$/gi);
+
+    const normalizedInput = hasJustSpacesRegex.test(inputedValue)
+      ? inputedValue.trim()
+      : inputedValue;
+
+    setTaskContent(normalizedInput);
   }
 
-  function handleAddNewEvent() {
+  function handleAddNewTask() {
     const id = Math.floor(Math.random() * 10000);
     const content = taskContent ?? "Descrição da tarefa não foi informada";
-    const newTask = new TaskModel(id, content);
+    const newTask = new TaskModel(id, content.trim());
     onCreateTask(newTask);
     setTaskContent("");
   }
 
+  const inputHasInvalidTaskName = taskContent.length === 0;
+
   return (
     <div className={styles.createTask}>
       <Input onChange={handleTaskContent} value={taskContent} />
-      <AddTaskButton onClick={handleAddNewEvent} />
+      <AddTaskButton
+        disabled={inputHasInvalidTaskName}
+        onClick={handleAddNewTask}
+      />
     </div>
   );
 }
