@@ -36,7 +36,7 @@ export function CreateTask({ onCreateTask }: CreateTaskProps) {
 
   return (
     <div className={styles.createTask}>
-      <Input onChange={handleTaskContent} value={taskContent} maxLength={65} />
+      <Input onChange={handleTaskContent} value={taskContent} maxLength={25} />
       <AddTaskButton
         disabled={inputHasInvalidTaskName}
         onClick={handleAddNewTask}
