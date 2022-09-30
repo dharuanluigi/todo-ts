@@ -3,15 +3,15 @@ import { useState } from "react";
 import RocketSvg from "./assets/rocket.svg";
 
 import styles from "./App.module.css";
+
 import { CreateTask } from "./components/CreateTask";
 import { ViewTask } from "./components/ViewTask";
-
 import { TaskProps } from "./components/Task";
 
-import moquedTasks from "./mocks/task.moq.json";
+import mockedTasks from "./mocks/task.moq.json";
 
 export function App() {
-  const [tasks, setTasks] = useState<TaskProps[]>(moquedTasks);
+  const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
 
   function completeTasks(taskId: number, isDone: boolean) {
     const newTasks = tasks.map((task) => {
@@ -33,6 +33,18 @@ export function App() {
     setTasks(tasksWithNewTask);
   }
 
+  function addNewDescription(task: TaskProps) {
+    const tasksWithTaskUpdated = tasks.map((itemTask) => {
+      if (itemTask.id === task.id) {
+        return task;
+      } else {
+        return itemTask;
+      }
+    });
+
+    setTasks(tasksWithTaskUpdated);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -49,6 +61,7 @@ export function App() {
           tasks={tasks}
           onTaskCompleted={completeTasks}
           onDeleteTask={deleteTasks}
+          onAddDescription={addNewDescription}
         />
       </div>
     </div>
