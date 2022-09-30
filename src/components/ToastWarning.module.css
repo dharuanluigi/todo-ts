@@ -1,0 +1,21 @@
+.toastContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+
+  position: absolute;
+  top: 40%;
+  left: 20%;
+
+  background: var(--gray-700);
+  border: 2px solid var(--gray-300);
+}
+
+.toastTitle {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+}
