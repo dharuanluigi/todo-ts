@@ -41,7 +41,7 @@ export function ViewTask({
           tasks.map((task) => (
             <Task
               key={task.id}
-              data={task}
+              task={task}
               onTaskCompleted={onTaskCompleted}
               onDeleteTask={onDeleteTask}
               onAddDescription={onAddDescription}

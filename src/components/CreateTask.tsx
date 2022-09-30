@@ -1,8 +1,9 @@
 import { ChangeEvent, useState } from "react";
-import { AddTaskButton } from "./AddTaskButton";
-import { Input } from "./Input";
 
 import styles from "./CreateTask.module.css";
+
+import { AddTaskButton } from "./AddTaskButton";
+import { Input } from "./Input";
 import { TaskProps } from "./Task";
 import { TaskModel } from "../models/task.model";
 
@@ -11,9 +12,9 @@ interface CreateTaskProps {
 }
 
 export function CreateTask({ onCreateTask }: CreateTaskProps) {
-  const [taskContent, setTaskContent] = useState<string>("");
+  const [taskName, setTaskName] = useState<string>("");
 
-  function handleTaskContent(event: ChangeEvent<HTMLInputElement>) {
+  function handleAddTaskName(event: ChangeEvent<HTMLInputElement>) {
     const inputedValue = event.target.value;
 
     const hasJustSpacesRegex = new RegExp(/^\s*$/gi);
@@ -21,22 +22,23 @@ export function CreateTask({ onCreateTask }: CreateTaskProps) {
     const normalizedInput = hasJustSpacesRegex.test(inputedValue)
       ? inputedValue.trim()
       : inputedValue;
-    setTaskContent(normalizedInput);
+
+    setTaskName(normalizedInput.trim());
   }
 
   function handleAddNewTask() {
     const id = Math.floor(Math.random() * 10000);
-    const content = taskContent ?? "Descrição da tarefa não foi informada";
-    const newTask = new TaskModel(id, content.trim());
+    const name = taskName;
+    const newTask = new TaskModel(id, name);
     onCreateTask(newTask);
-    setTaskContent("");
+    setTaskName("");
   }
 
-  const inputHasInvalidTaskName = taskContent.length === 0;
+  const inputHasInvalidTaskName = taskName.length === 0;
 
   return (
     <div className={styles.createTask}>
-      <Input onChange={handleTaskContent} value={taskContent} maxLength={25} />
+      <Input onChange={handleAddTaskName} value={taskName} maxLength={25} />
       <AddTaskButton
         disabled={inputHasInvalidTaskName}
         onClick={handleAddNewTask}

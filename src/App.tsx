@@ -13,19 +13,21 @@ import mockedTasks from "./mocks/task.moq.json";
 export function App() {
   const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
 
-  function completeTasks(taskId: number, isDone: boolean) {
-    const newTasks = tasks.map((task) => {
+  function completeTask(taskId: number, isDone: boolean) {
+    const allTasksWithTheCompletedOne = tasks.map((task) => {
       if (task.id === taskId) {
         task.isDone = isDone;
       }
       return task;
     });
-    setTasks(newTasks);
+    setTasks(allTasksWithTheCompletedOne);
   }
 
-  function deleteTasks(taskId: number) {
-    const tasksWithoutDeletedOne = tasks.filter((task) => task.id !== taskId);
-    setTasks(tasksWithoutDeletedOne);
+  function deleteTask(taskId: number) {
+    const allTasksWithoutDeletedOne = tasks.filter(
+      (task) => task.id !== taskId
+    );
+    setTasks(allTasksWithoutDeletedOne);
   }
 
   function addNewTask(task: TaskProps) {
@@ -59,8 +61,8 @@ export function App() {
       <div className={styles.containerTasks}>
         <ViewTask
           tasks={tasks}
-          onTaskCompleted={completeTasks}
-          onDeleteTask={deleteTasks}
+          onTaskCompleted={completeTask}
+          onDeleteTask={deleteTask}
           onAddDescription={addNewDescription}
         />
       </div>

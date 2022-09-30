@@ -9,15 +9,15 @@ import { TaskProps } from "./Task";
 import { ToastWarning } from "./ToastWarning";
 
 interface TaskDetailModalProps {
-  data: TaskProps;
+  task: TaskProps;
   onAddDescription: (task: TaskProps) => void;
 }
 
 export function TaskDetailModal({
-  data,
+  task,
   onAddDescription,
 }: TaskDetailModalProps) {
-  const [description, setDescription] = useState(data.description);
+  const [description, setDescription] = useState(task.description);
   const [isOpen, setIsOpen] = useState(false);
 
   function handleTypeScription(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -26,7 +26,7 @@ export function TaskDetailModal({
 
   function handleAddTaskDescription() {
     const taskWithNewDescription = {
-      ...data,
+      ...task,
       description,
     };
 
@@ -39,7 +39,7 @@ export function TaskDetailModal({
       <Dialog.Overlay className={styles.overlayModal} />
 
       <Dialog.Content className={styles.modalContent}>
-        <Dialog.Title>{data.content}</Dialog.Title>
+        <Dialog.Title>{task.name}</Dialog.Title>
 
         <form onSubmit={handleAddTaskDescription} className={styles.taskForm}>
           <textarea
