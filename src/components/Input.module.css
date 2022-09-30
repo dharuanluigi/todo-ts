@@ -1,3 +1,10 @@
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .inputTask {
   width: 39.8rem;
   height: 3.3rem;
@@ -10,11 +17,14 @@
   box-shadow: 0px 2px 8px var(--shadow);
 }
 
-.inputContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.charCounterLimitExceeded {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.1rem;
+
+  font-size: 0.750rem;
+  color: var(--red-200);
+  font-weight: 900;
 }
 
 .charCounter {
@@ -23,14 +33,4 @@
   bottom: 0.1rem;
 
   font-size: 0.750rem;
-}
-
-.charCounterLimitHit {
-  position: absolute;
-  right: 0.6rem;
-  bottom: 0.1rem;
-
-  font-size: 0.750rem;
-  color: var(--red-200);
-  font-weight: 900;
 }
