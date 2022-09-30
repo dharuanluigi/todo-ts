@@ -14,6 +14,10 @@
   color: var(--purple-100);
 }
 
+.totalCreatedTaskTitle:hover, .totalCompletedTaskTitle:hover {
+  cursor: pointer;
+}
+
 .counterTasks {
   width: 2.5rem;
   height: 1.1rem;
