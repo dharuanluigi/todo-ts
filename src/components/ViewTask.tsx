@@ -42,7 +42,7 @@ export function ViewTask({
   }
 
   return (
-    <div className={styles.taskViewContainer}>
+    <div>
       <div className={styles.taskHeader}>
         <div>
           <span

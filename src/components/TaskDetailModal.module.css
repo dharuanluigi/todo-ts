@@ -31,20 +31,6 @@
   margin-top: 0.5rem;
 }
 
-.taskDescription {
-  width: 100%;
-  height: 100%;
-  resize: none;
-
-  border-radius: 8px;
-  padding: 0.8rem;
-
-  text-align: justify;
-
-  background: var(--gray-500);
-  color: var(--gray-100);
-}
-
 .taskForm > button[type=submit] {
   height: 3rem;
   border-radius: 8px;
@@ -61,4 +47,18 @@
 .taskForm > button[type=submit]:hover {
   background: var(--blue-100);
   cursor: pointer;
+}
+
+.taskDescription {
+  width: 100%;
+  height: 100%;
+  resize: none;
+
+  border-radius: 8px;
+  padding: 0.8rem;
+
+  text-align: justify;
+
+  background: var(--gray-500);
+  color: var(--gray-100);
 }
