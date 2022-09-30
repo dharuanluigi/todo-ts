@@ -10,6 +10,11 @@ import { TaskProps } from "./components/Task";
 
 import mockedTasks from "./mocks/task.moq.json";
 
+export enum ESortTasks {
+  IsDone,
+  IsNotDone,
+}
+
 export function App() {
   const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
 
@@ -47,6 +52,32 @@ export function App() {
     setTasks(tasksWithTaskUpdated);
   }
 
+  function sortTasks(orientation: ESortTasks) {
+    const arraySorted = [...tasks];
+
+    if (orientation == ESortTasks.IsDone) {
+      arraySorted.sort((firstTask, secondTask) => {
+        if (firstTask.isDone && secondTask.isDone) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    } else {
+      arraySorted.sort((firstTask, secondTask) => {
+        if (!firstTask.isDone && !secondTask.isDone) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+
+    console.log(arraySorted);
+
+    setTasks(arraySorted);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -64,6 +95,7 @@ export function App() {
           onTaskCompleted={completeTask}
           onDeleteTask={deleteTask}
           onAddDescription={addNewDescription}
+          onSortTasks={sortTasks}
         />
       </div>
     </div>

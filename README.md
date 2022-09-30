@@ -22,8 +22,8 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
   [x] Ao clicar sobre o nome da task, é possível adicionar/alterar a descrição detalhada.
 
-  [ ] Ao clicar no contador de tarefas concluidas, ordenar e colocar em primeiro as taregas já concluidas.
+  [x] Ao clicar no contador de tarefas concluidas, ordenar e colocar em primeiro as taregas já concluidas.
 
-  [ ] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
+  [x] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
 
   [ ] Ao passar de mais de 15 tarefas, aparecer uma opção chamada: Apagar todas as tarefas concluídas.
