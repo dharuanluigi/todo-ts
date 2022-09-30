@@ -30,3 +30,30 @@
 
   margin-left: 0.5rem;
 }
+
+.tasksContainerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasksContainerContent > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  width: 10rem;
+  border-radius: 8px;
+  padding: 0.4rem;
+  border: none;
+
+  background: var(--red-300);
+  color: var(--gray-100);
+
+  transition: background-color 0.2s;
+}
+
+.tasksContainerContent > button:hover {
+  background: var(--red-200);
+  cursor: pointer;
+}

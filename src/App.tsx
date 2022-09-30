@@ -78,6 +78,13 @@ export function App() {
     setTasks(arraySorted);
   }
 
+  function deleteDoneTasks() {
+    const allTasksWithoutDoneTasks = tasks.filter(
+      (task) => task.isDone !== true
+    );
+    setTasks(allTasksWithoutDoneTasks);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -96,6 +103,7 @@ export function App() {
           onDeleteTask={deleteTask}
           onAddDescription={addNewDescription}
           onSortTasks={sortTasks}
+          onDeleteDoneTasks={deleteDoneTasks}
         />
       </div>
     </div>
