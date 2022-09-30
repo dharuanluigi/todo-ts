@@ -26,4 +26,4 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
   [x] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
 
-  [ ] Ao passar de mais de 15 tarefas, aparecer uma opção chamada: Apagar todas as tarefas concluídas.
+  [x] Ter possibilidade de apagar todas as tarefas finalizadas de uma vez.

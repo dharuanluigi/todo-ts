@@ -1,4 +1,4 @@
-import { CaretDown, CaretUp } from "phosphor-react";
+import { CaretDown, CaretUp, XCircle } from "phosphor-react";
 import { useState } from "react";
 import { ESortTasks } from "../App";
 import { EmptyTaskView } from "./EmptyTaskView";
@@ -12,6 +12,7 @@ interface ViewTaskProps {
   onDeleteTask: (taskId: number) => void;
   onAddDescription: (task: TaskProps) => void;
   onSortTasks: (orientation: ESortTasks) => void;
+  onDeleteDoneTasks: () => void;
 }
 
 export function ViewTask({
@@ -20,6 +21,7 @@ export function ViewTask({
   onDeleteTask,
   onAddDescription,
   onSortTasks,
+  onDeleteDoneTasks,
 }: ViewTaskProps) {
   const [isDoneTasksSortClick, setIsDoneTasksSortClick] = useState(false);
   const [isNotDoneTasksSortClick, setIsNotDoneTasksSortClick] = useState(true);
@@ -76,20 +78,29 @@ export function ViewTask({
         </div>
       </div>
 
-      <div>
-        {tasks.length > 0 ? (
-          tasks.map((task) => (
-            <Task
-              key={task.id}
-              task={task}
-              onTaskCompleted={onTaskCompleted}
-              onDeleteTask={onDeleteTask}
-              onAddDescription={onAddDescription}
-            />
-          ))
-        ) : (
-          <EmptyTaskView />
-        )}
+      <div className={styles.tasksContainerContent}>
+        <button
+          onClick={onDeleteDoneTasks}
+          title="Isso irá apagar todas as suas tarefas marcadas como concluídas"
+        >
+          <XCircle size={24} weight="bold" />
+          Concluídas
+        </button>
+        <div>
+          {tasks.length > 0 ? (
+            tasks.map((task) => (
+              <Task
+                key={task.id}
+                task={task}
+                onTaskCompleted={onTaskCompleted}
+                onDeleteTask={onDeleteTask}
+                onAddDescription={onAddDescription}
+              />
+            ))
+          ) : (
+            <EmptyTaskView />
+          )}
+        </div>
       </div>
     </div>
   );
