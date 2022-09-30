@@ -51,13 +51,21 @@
 }
 
 .checked_text {
+  background: var(--gray-500);
+  border: none;
   text-decoration: line-through;
   color: var(--gray-300);
 }
 
 .unChecked_text {
+  background: var(--gray-500);
+  border: none;
   text-decoration: none;
   color: var(--gray-100);
+}
+
+.checked_text:hover, .unChecked_text:hover {
+  cursor: pointer;
 }
 
 .styleCheckedIcon {

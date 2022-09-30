@@ -3,34 +3,48 @@ import { useState } from "react";
 import RocketSvg from "./assets/rocket.svg";
 
 import styles from "./App.module.css";
+
 import { CreateTask } from "./components/CreateTask";
 import { ViewTask } from "./components/ViewTask";
-
 import { TaskProps } from "./components/Task";
 
-import moquedTasks from "./mocks/task.moq.json";
+import mockedTasks from "./mocks/task.moq.json";
 
 export function App() {
-  const [tasks, setTasks] = useState<TaskProps[]>(moquedTasks);
+  const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
 
-  function completeTasks(taskId: number, isDone: boolean) {
-    const newTasks = tasks.map((task) => {
+  function completeTask(taskId: number, isDone: boolean) {
+    const allTasksWithTheCompletedOne = tasks.map((task) => {
       if (task.id === taskId) {
         task.isDone = isDone;
       }
       return task;
     });
-    setTasks(newTasks);
+    setTasks(allTasksWithTheCompletedOne);
   }
 
-  function deleteTasks(taskId: number) {
-    const tasksWithoutDeletedOne = tasks.filter((task) => task.id !== taskId);
-    setTasks(tasksWithoutDeletedOne);
+  function deleteTask(taskId: number) {
+    const allTasksWithoutDeletedOne = tasks.filter(
+      (task) => task.id !== taskId
+    );
+    setTasks(allTasksWithoutDeletedOne);
   }
 
   function addNewTask(task: TaskProps) {
     const tasksWithNewTask = [...tasks, task];
     setTasks(tasksWithNewTask);
+  }
+
+  function addNewDescription(task: TaskProps) {
+    const tasksWithTaskUpdated = tasks.map((itemTask) => {
+      if (itemTask.id === task.id) {
+        return task;
+      } else {
+        return itemTask;
+      }
+    });
+
+    setTasks(tasksWithTaskUpdated);
   }
 
   return (
@@ -47,8 +61,9 @@ export function App() {
       <div className={styles.containerTasks}>
         <ViewTask
           tasks={tasks}
-          onTaskCompleted={completeTasks}
-          onDeleteTask={deleteTasks}
+          onTaskCompleted={completeTask}
+          onDeleteTask={deleteTask}
+          onAddDescription={addNewDescription}
         />
       </div>
     </div>
