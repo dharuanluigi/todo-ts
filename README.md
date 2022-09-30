@@ -20,7 +20,7 @@ Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir
 
   [x] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
 
-  [ ] Ao clicar sobre o nome da task, é possível adicionar/alterar a descrição detalhada.
+  [x] Ao clicar sobre o nome da task, é possível adicionar/alterar a descrição detalhada.
 
   [ ] Ao clicar no contador de tarefas concluidas, ordenar e colocar em primeiro as taregas já concluidas.
 
