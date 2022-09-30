@@ -1,10 +1,10 @@
-import { InputHTMLAttributes, useState } from "react";
+import { InputHTMLAttributes } from "react";
 
 import styles from "./Input.module.css";
 
 export function Input({ ...props }: InputHTMLAttributes<HTMLInputElement>) {
   const totalCurrentLength = String(props.value).length;
-  const isLimitHited = totalCurrentLength == props.maxLength;
+  const isMaxNameLengthHited = totalCurrentLength == props.maxLength;
 
   return (
     <div className={styles.inputContainer}>
@@ -16,7 +16,9 @@ export function Input({ ...props }: InputHTMLAttributes<HTMLInputElement>) {
       />
       <span
         className={
-          isLimitHited ? styles.charCounterLimitHit : styles.charCounter
+          isMaxNameLengthHited
+            ? styles.charCounterLimitExceeded
+            : styles.charCounter
         }
       >
         {totalCurrentLength}/{props.maxLength}

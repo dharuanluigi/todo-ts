@@ -1,36 +1,37 @@
 import { useState } from "react";
+import { Check, Trash } from "phosphor-react";
+
 import * as Checkbox from "@radix-ui/react-checkbox";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Check, Trash } from "phosphor-react";
 
 import styles from "./Task.module.css";
 import { TaskDetailModal } from "./TaskDetailModal";
 
 export interface TaskProps {
   id: number;
-  content: string;
+  name: string;
   isDone: boolean;
   description?: string | null;
 }
 
-interface TaskPropsModel {
-  data: TaskProps;
+interface TaskComponentProps {
+  task: TaskProps;
   onTaskCompleted: (taskId: number, isChecked: boolean) => void;
   onDeleteTask: (taskId: number) => void;
   onAddDescription: (task: TaskProps) => void;
 }
 
 export function Task({
-  data,
+  task,
   onTaskCompleted,
   onDeleteTask,
   onAddDescription,
-}: TaskPropsModel) {
-  const [isTaskDone, setIsTaskDone] = useState<boolean>(data.isDone);
+}: TaskComponentProps) {
+  const [isTaskDone, setIsTaskDone] = useState<boolean>(task.isDone);
 
   function handleTaskIsDone(isChecked: boolean) {
     setIsTaskDone(isChecked);
-    onTaskCompleted(data.id, isChecked);
+    onTaskCompleted(task.id, isChecked);
   }
 
   return (
@@ -52,16 +53,16 @@ export function Task({
                 isTaskDone ? styles.checked_text : styles.unChecked_text
               }
             >
-              {data.content}
+              {task.name}
             </Dialog.Trigger>
-            <TaskDetailModal data={data} onAddDescription={onAddDescription} />
+            <TaskDetailModal task={task} onAddDescription={onAddDescription} />
           </Dialog.Root>
         </div>
         <Trash
           weight="bold"
           size={20}
           className={styles.styleTrashIcon}
-          onClick={() => onDeleteTask(data.id)}
+          onClick={() => onDeleteTask(task.id)}
         />
       </div>
     </div>
