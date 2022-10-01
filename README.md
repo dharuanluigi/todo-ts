@@ -57,7 +57,7 @@ Como forma de desafio, adicionei mais seis funcionalidades.
 
 ### Atualizar nome da tarefa
 
-[gif atualizando nome]
+![todo-update-name-task-v 10](https://user-images.githubusercontent.com/50119686/193419230-906d228b-200f-4807-9ece-a31351e00923.gif)
 
 ---
 
