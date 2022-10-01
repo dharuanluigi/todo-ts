@@ -13,6 +13,7 @@ interface ViewTaskProps {
   onAddDescription: (task: TaskProps) => void;
   onSortTasks: (orientation: ESortTasks) => void;
   onDeleteDoneTasks: () => void;
+  onUpdateTaskName: (task: TaskProps) => void;
 }
 
 export function ViewTask({
@@ -22,6 +23,7 @@ export function ViewTask({
   onAddDescription,
   onSortTasks,
   onDeleteDoneTasks,
+  onUpdateTaskName,
 }: ViewTaskProps) {
   const [isDoneTasksSortClick, setIsDoneTasksSortClick] = useState(false);
   const [isNotDoneTasksSortClick, setIsNotDoneTasksSortClick] = useState(true);
@@ -95,6 +97,7 @@ export function ViewTask({
                 onTaskCompleted={onTaskCompleted}
                 onDeleteTask={onDeleteTask}
                 onAddDescription={onAddDescription}
+                onUpdateTaskName={onUpdateTaskName}
               />
             ))
           ) : (
