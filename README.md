@@ -1,18 +1,62 @@
 # Sobre o projeto
 
-Projecto desenvolvido durante estudos de react através da trilha Ignite da Rocketseat. Neste projeto o intuito era criar um aplicativo de listagem de tarefas chamado: TODO.
+Projeto desenvolvido durante estudos de react através da trilha Ignite da Rocketseat. Neste projeto o intuito era criar um aplicativo de listagem de tarefas chamado: _TODO_.
 
 ## Funcionalidades
 
 Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir. De forma simples é possível adicionar uma nova tarefa, marcar como concluída e excluir uma tarefa.
 
-## Funcionamento
+Como forma de desafio, adicionei mais cinco funcionalidades.
 
-![todo-v0 2](https://user-images.githubusercontent.com/50119686/192666198-5c589b5d-09ba-4d6f-911c-0f3776589de7.gif)
-
-### Trilha adicional
+1. Validação nome da tarefa.
+2. Adicionar limite no nome da tarefa.
+3. Adicinar descrição de detalhes ao clicar no nome da tarefa.
+4. Ordenar tarefas por concluídas ou criadas ao clicar sobre a label de contadora.
+5. Apagar todas as tarefas concluídas de uma vez.
 
 ---
+
+## Funcionamento Básico
+
+### Criar tarefas
+
+[gif criando tarefas]
+
+### Marcar como concluída
+
+[gif marcando tarefas como concluída]
+
+### Excluindo uma tarefa
+
+[gif excluindo uma tarefa]
+
+---
+
+## **Funcionamento adicional**
+
+### Validação nome tarefa
+
+[gif nome tarefa]
+
+### Limite nome tarefa
+
+[gif limite nome tarefa]
+
+### Adicionar descrição tarefa
+
+[gif adicionando descrição tarefa]
+
+### Ordenando tarefas
+
+[gif ordenando tarefas]
+
+### Apagar todas concluídas
+
+[gif apagando todas concluidas]
+
+---
+
+### Itens Trilha adicional
 
 - Itens planejados de melhoria
 
