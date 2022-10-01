@@ -6,13 +6,14 @@ Projeto desenvolvido durante estudos de react através da trilha Ignite da Rocke
 
 Com o aplicativo é possível fazer o controle de tarefas que precisamos cumprir. De forma simples é possível adicionar uma nova tarefa, marcar como concluída e excluir uma tarefa.
 
-Como forma de desafio, adicionei mais cinco funcionalidades.
+Como forma de desafio, adicionei mais seis funcionalidades.
 
 1. Validação nome da tarefa.
 2. Adicionar limite no nome da tarefa.
 3. Adicinar descrição de detalhes ao clicar no nome da tarefa.
 4. Ordenar tarefas por concluídas ou criadas ao clicar sobre a label de contadora.
 5. Apagar todas as tarefas concluídas de uma vez.
+6. Conseguir atualizar o nome da tarefa.
 
 ---
 
@@ -54,6 +55,10 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 <img src="https://user-images.githubusercontent.com/50119686/193413912-296cddd4-823e-4e79-8c6d-6ea5febd67da.gif" style="border-radius: 10px; width: 80%"/>
 
+### Atualizar nome da tarefa
+
+<img src="https://user-images.githubusercontent.com/50119686/193419230-906d228b-200f-4807-9ece-a31351e00923.gif" style="border-radius: 10px; width: 80%"/>
+
 ---
 
 ### Itens Trilha adicional
@@ -71,3 +76,5 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
   [x] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
 
   [x] Ter possibilidade de apagar todas as tarefas finalizadas de uma vez.
+
+  [x] Atualizar nome da tarefa

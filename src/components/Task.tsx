@@ -19,6 +19,7 @@ interface TaskComponentProps {
   onTaskCompleted: (taskId: number, isChecked: boolean) => void;
   onDeleteTask: (taskId: number) => void;
   onAddDescription: (task: TaskProps) => void;
+  onUpdateTaskName: (task: TaskProps) => void;
 }
 
 export function Task({
@@ -26,6 +27,7 @@ export function Task({
   onTaskCompleted,
   onDeleteTask,
   onAddDescription,
+  onUpdateTaskName,
 }: TaskComponentProps) {
   const [isTaskDone, setIsTaskDone] = useState<boolean>(task.isDone);
 
@@ -55,7 +57,11 @@ export function Task({
             >
               {task.name}
             </Dialog.Trigger>
-            <TaskDetailModal task={task} onAddDescription={onAddDescription} />
+            <TaskDetailModal
+              task={task}
+              onAddDescription={onAddDescription}
+              onUpdateTaskName={onUpdateTaskName}
+            />
           </Dialog.Root>
         </div>
         <Trash

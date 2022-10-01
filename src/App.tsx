@@ -85,6 +85,18 @@ export function App() {
     setTasks(allTasksWithoutDoneTasks);
   }
 
+  function updateTaskName(taskWithNewName: TaskProps) {
+    const allTasksWithOneOfNameUpdated = tasks.map((task) => {
+      if (task.id === taskWithNewName.id) {
+        return taskWithNewName;
+      } else {
+        return task;
+      }
+    });
+
+    setTasks(allTasksWithOneOfNameUpdated);
+  }
+
   return (
     <div>
       <header className={styles.containerHeader}>
@@ -104,6 +116,7 @@ export function App() {
           onAddDescription={addNewDescription}
           onSortTasks={sortTasks}
           onDeleteDoneTasks={deleteDoneTasks}
+          onUpdateTaskName={updateTaskName}
         />
       </div>
     </div>
