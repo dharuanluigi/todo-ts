@@ -20,13 +20,15 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Criar tarefas
 
-![todo-create-task-v 10](https://user-images.githubusercontent.com/50119686/193413890-1ace5e9f-8f71-42d0-ae1a-ef6abf0f718e.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193413890-1ace5e9f-8f71-42d0-ae1a-ef6abf0f718e.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Marcar como concluída
 
-![todo-check-done-task-v 10](https://user-images.githubusercontent.com/50119686/193413900-72d7e183-e700-41ea-ba91-4117b7ed5b2d.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193413900-72d7e183-e700-41ea-ba91-4117b7ed5b2d.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Excluindo uma tarefa
+
+<img src="" style="border-radius: 10px; width: 80%"/>
 
 ![todo-delete-task-v 10](https://user-images.githubusercontent.com/50119686/193413942-0abd463c-4ba5-4471-a3d8-f1597476eac3.gif)
 
@@ -36,23 +38,23 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Validação nome tarefa
 
-![todo-add-validation-task-v 10](https://user-images.githubusercontent.com/50119686/193414004-f79bd2b2-eee8-4f29-8c17-6b492be61d18.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193414004-f79bd2b2-eee8-4f29-8c17-6b492be61d18.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Limite nome tarefa
 
-![todo-name-validation-task-v 10](https://user-images.githubusercontent.com/50119686/193414016-e11b079c-b25b-452d-a1e1-00f9284de15f.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193414016-e11b079c-b25b-452d-a1e1-00f9284de15f.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Adicionar descrição tarefa
 
-![todo-add-description-task-v 10](https://user-images.githubusercontent.com/50119686/193414654-6da5b6c3-ba4e-4e13-9506-466943e211a0.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193414654-6da5b6c3-ba4e-4e13-9506-466943e211a0.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Ordenando tarefas
 
-![todo-sort-task-v 10](https://user-images.githubusercontent.com/50119686/193414029-2deb23c9-2688-4f2f-a64b-61f50a2c004a.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193414029-2deb23c9-2688-4f2f-a64b-61f50a2c004a.gif" style="border-radius: 10px; width: 80%"/>
 
 ### Apagar todas concluídas
 
-![todo-delete-done-task-v 10](https://user-images.githubusercontent.com/50119686/193413912-296cddd4-823e-4e79-8c6d-6ea5febd67da.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193413912-296cddd4-823e-4e79-8c6d-6ea5febd67da.gif" style="border-radius: 10px; width: 80%"/>
 
 ---
 
