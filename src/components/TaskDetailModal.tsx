@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Toast from "@radix-ui/react-toast";
@@ -24,7 +24,9 @@ export function TaskDetailModal({
     setDescription(event.target.value);
   }
 
-  function handleAddTaskDescription() {
+  function handleAddTaskDescription(event: FormEvent) {
+    event.preventDefault();
+
     const taskWithNewDescription = {
       ...task,
       description,
