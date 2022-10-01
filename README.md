@@ -55,6 +55,10 @@ Como forma de desafio, adicionei mais seis funcionalidades.
 
 <img src="https://user-images.githubusercontent.com/50119686/193413912-296cddd4-823e-4e79-8c6d-6ea5febd67da.gif" style="border-radius: 10px; width: 80%"/>
 
+### Atualizar nome da tarefa
+
+[gif atualizando nome]
+
 ---
 
 ### Itens Trilha adicional
