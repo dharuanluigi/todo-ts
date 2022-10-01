@@ -20,15 +20,15 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Criar tarefas
 
-[gif criando tarefas]
+![todo-create-task-v 10](https://user-images.githubusercontent.com/50119686/193413890-1ace5e9f-8f71-42d0-ae1a-ef6abf0f718e.gif)
 
 ### Marcar como concluída
 
-[gif marcando tarefas como concluída]
+![todo-check-done-task-v 10](https://user-images.githubusercontent.com/50119686/193413900-72d7e183-e700-41ea-ba91-4117b7ed5b2d.gif)
 
 ### Excluindo uma tarefa
 
-[gif excluindo uma tarefa]
+![todo-delete-task-v 10](https://user-images.githubusercontent.com/50119686/193413942-0abd463c-4ba5-4471-a3d8-f1597476eac3.gif)
 
 ---
 
@@ -36,11 +36,11 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Validação nome tarefa
 
-[gif nome tarefa]
+![todo-add-validation-task-v 10](https://user-images.githubusercontent.com/50119686/193414004-f79bd2b2-eee8-4f29-8c17-6b492be61d18.gif)
 
 ### Limite nome tarefa
 
-[gif limite nome tarefa]
+![todo-name-validation-task-v 10](https://user-images.githubusercontent.com/50119686/193414016-e11b079c-b25b-452d-a1e1-00f9284de15f.gif)
 
 ### Adicionar descrição tarefa
 
@@ -48,11 +48,11 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Ordenando tarefas
 
-[gif ordenando tarefas]
+![todo-sort-task-v 10](https://user-images.githubusercontent.com/50119686/193414029-2deb23c9-2688-4f2f-a64b-61f50a2c004a.gif)
 
 ### Apagar todas concluídas
 
-[gif apagando todas concluidas]
+![todo-delete-done-task-v 10](https://user-images.githubusercontent.com/50119686/193413912-296cddd4-823e-4e79-8c6d-6ea5febd67da.gif)
 
 ---
 
