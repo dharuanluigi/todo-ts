@@ -28,9 +28,7 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Excluindo uma tarefa
 
-<img src="" style="border-radius: 10px; width: 80%"/>
-
-![todo-delete-task-v 10](https://user-images.githubusercontent.com/50119686/193413942-0abd463c-4ba5-4471-a3d8-f1597476eac3.gif)
+<img src="https://user-images.githubusercontent.com/50119686/193413942-0abd463c-4ba5-4471-a3d8-f1597476eac3.gif" style="border-radius: 10px; width: 80%"/>
 
 ---
 
