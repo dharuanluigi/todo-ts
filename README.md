@@ -83,16 +83,30 @@ Como forma de desafio, adicionei mais seis funcionalidades.
 
 - Itens planejados de melhoria
 
-  [x] Adicionar validação input.
+  - [x] Adicionar validação input.
 
-  [x] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
+  - [x] Na validação adicionar máximo número de caractéres para o titulo da tarefa.
 
-  [x] Ao clicar sobre o nome da task, é possível adicionar/alterar a descrição detalhada.
+  - [x] Ao clicar sobre o nome da task, é possível adicionar/alterar a descrição detalhada.
 
-  [x] Ao clicar no contador de tarefas concluidas, ordenar e colocar em primeiro as taregas já concluidas.
+  - [x] Ao clicar no contador de tarefas concluidas, ordenar e colocar em primeiro as taregas já concluidas.
 
-  [x] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
+  - [x] Ao clicar em taredas criadas, ordenar e colocar em primeiro as taregas ainda não concluidas.
 
-  [x] Ter possibilidade de apagar todas as tarefas finalizadas de uma vez.
+  - [x] Ter possibilidade de apagar todas as tarefas finalizadas de uma vez.
 
-  [x] Atualizar nome da tarefa
+  - [x] Atualizar nome da tarefa
+
+---
+
+## Detalhes técnicos
+
+Para conseguir rodar o projeto é necessário seguir os passos:
+
+O projeto foi construído inteiramente apenas com React e Typescript usando o Vite. Ou seja, para conseguir rodar no seu equipamento:
+
+1. Necessário ter instalado o nodeJS na versão: 16.17 e npm na versão 8.15. Para fazer o download e instalar basta baixar aqui: [NodeJS com NPM](https://nodejs.dev/en/download/)
+2. Agora com eles instalados, clone o projeto para seu equipamento.
+3. Abra a pasta do projeto no seu terminal(linha de comando) e dentro da raiz do projeto, seu caminho deve ser: **nomeDoProjeto/** ao listar os arquivos da pasta, você deve ver o arquivo chamado: **package.json.**
+4. Dentro do terminal digite o comando: `npm install`, isso ira instalar todas as dependências necessárias do projeto.
+5. Depois de instalados, basta rodar o comando: `npm run dev`. Isso ira executar localmente o projeto, basta abrir a url em seu navegador.
