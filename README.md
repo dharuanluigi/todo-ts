@@ -44,7 +44,7 @@ Como forma de desafio, adicionei mais cinco funcionalidades.
 
 ### Adicionar descrição tarefa
 
-[gif adicionando descrição tarefa]
+![todo-add-description-task-v 10](https://user-images.githubusercontent.com/50119686/193414654-6da5b6c3-ba4e-4e13-9506-466943e211a0.gif)
 
 ### Ordenando tarefas
 
